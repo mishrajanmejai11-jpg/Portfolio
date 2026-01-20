@@ -1,0 +1,269 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0e1117;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+/* ================= LAYOUT ================= */
+/* 
+.main_name {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.main_main_heading {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #8b949e;
+} */
+ /* ===== HERO NAME CONTAINER ===== */
+
+.main_name {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+/* ===== WORD ANIMATION ===== */
+
+.word {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  transform: translateY(-120px);
+  opacity: 0;
+  animation: dropDown 0.8s ease forwards;
+}
+
+/* Delay for second word */
+.word:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+/* ===== DROP FROM TOP ANIMATION ===== */
+
+@keyframes dropDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== SUB HEADING ===== */
+
+.main_main_heading {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #94a3b8;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Fade for sub heading */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* ===== HEADER NAME ===== */
+
+
+.main_name {
+  text-align: center;
+  margin-top: 80px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.main_name:hover {
+  transform: translateY(-6px) scale(1.03);
+  filter: drop-shadow(0 10px 25px rgba(99, 102, 241, 0.4));
+}
+
+/* ===== SUB HEADING ===== */
+
+.main_main_heading {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #94a3b8;
+
+  transition: all 0.4s ease;
+}
+
+.main_main_heading:hover {
+  color: #38bdf8;
+  letter-spacing: 6px;
+}
+
+/* ================= HERO SECTION ================= */
+
+.main_name_section_one {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 60px;
+  background: #161b22;
+  border-radius: 14px;
+  border: 1px solid #21262d;
+  text-align: center;
+}
+
+.main_name_section_one p {
+  font-size: 1.1rem;
+  color: #c9d1d9;
+  margin-bottom: 40px;
+}
+
+.label_name_section {
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn_view_project_section,
+.btn_download_resume_section,
+.btn_contact_me_section {
+  padding: 12px 30px;
+  margin: 8px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: transparent;
+  color: #e6edf3;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn_view_project_section:hover,
+.btn_download_resume_section:hover,
+.btn_contact_me_section:hover {
+  background: #238636;
+  border-color: #238636;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ================= ABOUT ================= */
+
+.main_about_me_section_two {
+  max-width: 1100px;
+  margin: 90px auto;
+  padding: 60px;
+  background: #161b22;
+  border-radius: 14px;
+  border: 1px solid #21262d;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #58a6ff;
+  text-align: center;
+}
+
+.section_two_intro_line {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: #c9d1d9;
+  font-weight: 400;
+}
+
+/* ================= SKILLS ================= */
+
+.main_skills_container {
+  max-width: 1100px;
+  margin: 90px auto;
+  padding: 60px;
+  background: #161b22;
+  border-radius: 14px;
+  border: 1px solid #21262d;
+  text-align: center;
+  color: #c9d1d9;
+  font-size: 1.05rem;
+}
+
+.skills_heading {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #58a6ff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .main_name_section_one,
+  .main_about_me_section_two,
+  .main_skills_container {
+    margin: 60px 20px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_name {
+    font-size: 2.6rem;
+  }
+
+  .btn_view_project_section,
+  .btn_download_resume_section,
+  .btn_contact_me_section {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_name {
+    font-size: 2.2rem;
+  }
+
+  .main_name_section_one p,
+  .section_two_intro_line,
+  .main_skills_container {
+    font-size: 0.95rem;
+  }
+}

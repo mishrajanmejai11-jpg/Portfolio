@@ -1,0 +1,114 @@
+/* ===== PROJECT SECTION ===== */
+
+.main_projects_container {
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 60px;
+  background: #0f172a;
+  border-radius: 18px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  color: #e5e7eb;
+}
+
+/* Section Title */
+.main_projects_container::before {
+  content: "Projects";
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #38bdf8;
+  text-align: center;
+}
+
+/* ===== PROJECT CONTENT ===== */
+
+.intro_about_projects {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #cbd5f5;
+  margin-bottom: 40px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+/* ===== PROJECT IMAGE ===== */
+
+.img_project_screenshot {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 14px;
+  margin: 30px 0 40px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s ease;
+}
+
+.img_project_screenshot:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.25);
+}
+
+/* ===== PROJECT BUTTONS ===== */
+
+.btn_live_demo,
+.btn_fithub_repo {
+  padding: 14px 36px;
+  margin: 10px 12px 0 0;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn_live_demo {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn_live_demo:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+}
+
+.btn_fithub_repo:hover {
+  background: #020617;
+  border-color: #38bdf8;
+  color: #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .main_projects_container {
+    margin: 80px 20px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro_about_projects {
+    font-size: 0.95rem;
+  }
+
+  .btn_live_demo,
+  .btn_fithub_repo {
+    width: 100%;
+    max-width: 320px;
+    margin: 12px auto;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_projects_container::before {
+    font-size: 2rem;
+  }
+}

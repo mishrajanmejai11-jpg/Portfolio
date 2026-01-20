@@ -1,0 +1,109 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;   /* FORCE viewport width */
+  height: 70px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+  z-index: 99999;
+}
+
+/* ================= INNER ================= */
+.header-inner {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================= LOGO ================= */
+.logo h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* ================= NAV ================= */
+.nav {
+  display: flex;
+  gap: 22px;
+}
+
+.nav a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #38bdf8;
+}
+
+/* ================= SOCIAL ================= */
+.social {
+  display: flex !important;   /* FORCE VISIBILITY */
+  gap: 14px;
+  align-items: center;
+}
+
+.social a {
+  color: #cbd5f5;
+  font-size: 1.4rem;
+}
+
+.social a:hover {
+  color: #38bdf8;
+}
+
+/* ================= MENU BTN ================= */
+.menu-btn {
+  display: none;
+  font-size: 1.6rem;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 260px;
+    height: calc(100vh - 70px);
+    background: #020617;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 22px;
+    border-left: 1px solid #1e293b;
+    transition: 0.4s ease;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+}
